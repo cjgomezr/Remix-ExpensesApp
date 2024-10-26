@@ -1,10 +1,15 @@
 import { Outlet } from "@remix-run/react";
+import expensesStyles from "/app/styles/expenses/expenses.css?url";
 
 export default function expensesLayout() {
   return (
     <main>
-      <h1>shared expenses navbar</h1>
-      <Outlet/>
+      <p>Shared element!</p>
+      <Outlet />
     </main>
   );
+}
+
+export function links() {
+  return [{ rel: "stylesSheet", href: expensesStyles }];
 }

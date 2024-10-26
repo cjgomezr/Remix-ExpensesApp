@@ -7,9 +7,14 @@ import {
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
 
-import "./tailwind.css";
+import sharedStyles from "~/styles/shared.css?url";
 
-export const links: LinksFunction = () => [];
+export const links: LinksFunction = () => [
+  {
+    rel: "styleSheet",
+    href: sharedStyles
+  }
+];
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
